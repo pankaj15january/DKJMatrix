@@ -1,3 +1,145 @@
+# 1. Save person
+URL: https://p4f2la6fhf.execute-api.ap-south-1.amazonaws.com/dev/api/person
+Method Type: POST
+Body:
+{
+    "firstName": "Mohit",
+    "lastName": "Kumar",
+    "age": 20,
+    "address": {
+        "number": 105,
+        "street": "Shyam Vihar",
+        "postcode": "110075",
+        "city": "New Delhi",
+        "country": "India"
+    },
+    "createdAt": "2024-12-03T19:59:45.552+00:00",
+    "insurance": true,
+    "cars": [
+        {
+            "brand": "Fiat",
+            "model": "3001",
+            "maxSpeedKmH": 380.0
+        }
+    ]
+}
+
+# 2. Save list of person in batch
+URL: https://p4f2la6fhf.execute-api.ap-south-1.amazonaws.com/dev/api/persons
+Method Type: POST
+Body:
+[
+    {
+        "firstName": "Sunil",
+        "lastName": "Kumar",
+        "age": 44,
+        "address": {
+            "number": 103,
+            "street": "Shyam Vihar",
+            "postcode": "110075",
+            "city": "New Delhi",
+            "country": "India"
+        },
+        "createdAt": "2024-12-03T19:59:45.552+00:00",
+        "insurance": true,
+        "cars": [
+            {
+                "brand": "Fiat",
+                "model": "3001",
+                "maxSpeedKmH": 380.0
+            }
+        ]
+    },
+    {
+        "firstName": "Anuj",
+        "lastName": "Kumar",
+        "age": 23,
+        "address": {
+            "number": 104,
+            "street": "Shyam Vihar",
+            "postcode": "110075",
+            "city": "New Delhi",
+            "country": "India"
+        },
+        "createdAt": "2024-11-20T06:50:53.008+00:00",
+        "insurance": true,
+        "cars": [
+            {
+                "brand": "Audi",
+                "model": "3001",
+                "maxSpeedKmH": 380.0
+            }
+        ]
+    }
+]
+
+# 3. Update List of persons in batch
+URL: https://p4f2la6fhf.execute-api.ap-south-1.amazonaws.com/dev/api/persons
+Method Type: POST
+[
+    {
+        "id": "6715434bcb39694e7b4b4fe6",
+        "firstName": "Pankaj Kumar",
+        "lastName": "Jha",
+        "age": 44,
+        "address": {
+            "number": 101,
+            "street": "Shyam Vihar",
+            "postcode": "110075",
+            "city": "New Delhi",
+            "country": "India"
+        },
+        "createdAt": "2024-12-03T19:59:45.552+00:00",
+        "insurance": true,
+        "cars": [
+            {
+                "brand": "Dev",
+                "model": "3001",
+                "maxSpeedKmH": 380.0
+            }
+        ]
+    },
+    {
+        "id": "673d86a7f4b54e3052d401d9",
+        "firstName": "Rohan Kumar",
+        "lastName": "Kumar",
+        "age": 23,
+        "address": {
+            "number": 102,
+            "street": "Shyam Vihar",
+            "postcode": "110075",
+            "city": "New Delhi",
+            "country": "India"
+        },
+        "createdAt": "2024-11-20T06:50:53.008+00:00",
+        "insurance": true,
+        "cars": [
+            {
+                "brand": "Dev",
+                "model": "3001",
+                "maxSpeedKmH": 380.0
+            }
+        ]
+    }
+]
+
+# 4. Find all persons
+Method Type: GET
+URL: https://p4f2la6fhf.execute-api.ap-south-1.amazonaws.com/dev/api/persons
+
+# 5. Find a persons by ID
+Method Type: GET
+URL: https://p4f2la6fhf.execute-api.ap-south-1.amazonaws.com/dev/api/person/674f665c3e077a7aa1b28059
+
+# 6. Delete by ID
+Method Type: DELETE
+URL: https://p4f2la6fhf.execute-api.ap-south-1.amazonaws.com/dev/api/person/674f681701335d7759251c74
+
+# 7. Delete bbatch IDs
+Method Type: DELETE
+URL: https://p4f2la6fhf.execute-api.ap-south-1.amazonaws.com/dev/api/person/674f681701335d7759251c74
+
+
 # AWS Lambda + Spring Boot 3
 
 Before we get started, let's talk about why you might want to use AWS Lambda and Spring Boot 3. You are probably used
